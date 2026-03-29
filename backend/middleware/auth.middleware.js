@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import User from '../models/user.model';
+import User from '../models/user.model.js';
 
 
 const authMiddleware = async (req, res, next) => {
@@ -16,7 +16,7 @@ const authMiddleware = async (req, res, next) => {
 
         if (!user) {
             return res.status(404).json({
-                message: "user not found or invalid"
+                message: "user not found "
             })
         }
 
@@ -30,3 +30,5 @@ const authMiddleware = async (req, res, next) => {
         });
     }
 }
+
+export default authMiddleware;

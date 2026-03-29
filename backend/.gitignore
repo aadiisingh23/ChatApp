@@ -1,0 +1,8 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Environment Variables (CRITICAL: Do not upload your secrets)
+.env
+.env.local
